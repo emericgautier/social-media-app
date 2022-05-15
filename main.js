@@ -1,3 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // form validation | target all the ID selectors from the HTML
 let form = document.getElementById("form");
 let input = document.getElementById("input");
@@ -24,21 +44,27 @@ let formValidation = () => {
     }
 };
 
-
+// accept data from input fields
+// store them in the object data
 let data = {};
 
+// function
 let acceptData = () => {
     data["text"] = input.value;
     console.log(data);
+    createPost();
 };
 
-
-
-
-
-
-
-
-
-
-
+// create template literals | parent div, input, options div that carries icons
+let createPost = () => {
+    posts.innerHTML += `
+    <div>
+        <p>${data.text}</p>
+        <span class="options">
+        <i onClick="editPost(this)" class="fas fa-edit"></i>
+        <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+        </span>
+    </div>
+    `;
+    input.value = "";
+};
