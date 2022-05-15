@@ -1,23 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // form validation | target all the ID selectors from the HTML
 let form = document.getElementById("form");
 let input = document.getElementById("input");
